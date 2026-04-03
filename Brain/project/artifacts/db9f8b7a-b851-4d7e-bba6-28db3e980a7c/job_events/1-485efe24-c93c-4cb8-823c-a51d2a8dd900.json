@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "485efe24-c93c-4cb8-823c-a51d2a8dd900", "counter": 1, "stdout": "\u001b[1;35m[WARNING]: Unable to parse /mnt/y/Python Projects/Self-Healing Network Eco System/Brain/project/inventory as an inventory source\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "db9f8b7a-b851-4d7e-bba6-28db3e980a7c", "created": "2026-04-03T16:25:08.725869+00:00"}

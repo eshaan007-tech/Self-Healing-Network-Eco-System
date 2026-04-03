@@ -1,0 +1,22 @@
+[1;35m[WARNING]: Unable to parse /mnt/y/Python Projects/Self-Healing Network Eco System/Brain/project/inventory as an inventory source[0m
+[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available[0m
+[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'[0m
+
+PLAY [To Restart a particular container] ***************************************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [To Restart Flask docker container] ***************************************
+[0;31m[ERROR]: Task failed: Module failed: Failed to import the required Python library (requests) on DESKTOP-SV5DGGI's Python /home/hp/.local/share/pipx/venvs/ansible-core/bin/python. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter[0m
+[0;31mOrigin: /mnt/y/Python Projects/Self-Healing Network Eco System/Brain/project/restart_container.yaml:5:7[0m
+[0;31m[0m
+[0;31m3   connection: local[0m
+[0;31m4   tasks:[0m
+[0;31m5     - name: To Restart Flask docker container[0m
+[0;31m        ^ column 7[0m
+[0;31m[0m
+[0;31mfatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (requests) on DESKTOP-SV5DGGI's Python /home/hp/.local/share/pipx/venvs/ansible-core/bin/python. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : [0;32mok=1   [0m changed=0    unreachable=0    [0;31mfailed=1   [0m skipped=0    rescued=0    ignored=0   

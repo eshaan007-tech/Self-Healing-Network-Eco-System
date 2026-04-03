@@ -36,7 +36,7 @@ def check_service():
 while True:
     status = check_service()
     if status is None or status != 200:
-        ansible_runner.run(playbook="restart_container.yaml")
+        ansible_runner.run(private_data_dir='Brain/project/', playbook='restart_container.yaml')
     time.sleep(5)
 
 # Adding an Offline LLM 
