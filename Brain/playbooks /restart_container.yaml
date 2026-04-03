@@ -1,0 +1,9 @@
+- name: To Restart a particular container
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: To Restart Flask docker container
+      community.docker.docker_container:
+        name: flaskcc
+        state: started
+        restart: true
