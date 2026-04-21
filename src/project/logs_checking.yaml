@@ -1,0 +1,25 @@
+---
+- name: To Restart a particular container and save logs
+  hosts: localhost
+  connection: local
+  vars:
+    container_name: "flaskcc"
+    # This saves the file in the same folder as your playbook
+    log_output_file: "logs_{{ container_name }}.txt"
+
+  tasks:
+    - name: To Restart Flask docker container
+      community.docker.docker_container:
+        name: "{{ container_name }}"
+        state: started
+        restart: true
+
+    - name: Get logs from the flask container
+      shell: "docker logs {{ container_name }}"
+      register: flask_logs
+      changed_when: false
+
+    - name: Save flask logs to a local file
+      copy:
+        content: "{{ flask_logs.stdout }}"
+        dest: "./{{ log_output_file }}"
