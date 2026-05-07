@@ -1,6 +1,5 @@
 import time
 import ansible_runner
-import ollama
 
 try:
     import requests
